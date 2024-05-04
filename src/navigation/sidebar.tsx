@@ -25,7 +25,8 @@ export const sidebarLinks = (currentPathname: string): INavLink[] => {
       singleItemCondition:
         currentPathname === routes.DASHBOARD_LAYOUT ||
         currentPathname.includes(routes.BUY_AIRTIME_PAGE) ||
-        currentPathname.includes(routes.BUY_DATA_PAGE),
+        currentPathname.includes(routes.BUY_DATA_PAGE) ||
+        currentPathname.includes(routes.PAY_CABLE_TV_PAGE),
     },
 
     {
