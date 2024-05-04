@@ -82,7 +82,7 @@ const LeadsReport: React.FC = () => {
           <div className="p-4 md:p-6 xl:p-7.5">
             <div className="flex flex-col gap-7">
               {details.map((detail, key) => (
-                <div className="flex items-center gap-3" key={key}>
+                <div className="flex items-center gap-3 text-black" key={key}>
                   <div className="flex-1 ">
                     <div className="flex items-center">
                       <span className=" flex aspect-square h-full items-center justify-center rounded-full bg-red/50 p-2">

@@ -63,7 +63,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute  left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      className={`absolute  left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
@@ -119,7 +119,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             return (
               <dl key={index}>
                 {!!sectionTitle && (
-                  <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+                  <h3 className="mb-4 ml-4 text-sm font-semibold text-black dark:text-bodydark2">
                     {sectionTitle}
                   </h3>
                 )}
@@ -159,7 +159,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                       <NavLink
                                         to={route}
                                         className={({ isActive }) =>
-                                          'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
+                                          'group relative flex items-center gap-2.5 rounded-md bg-[#EFEFEF] px-4 font-medium text-black duration-300 ease-in-out hover:text-white dark:text-bodydark2 ' +
                                           (isActive && '!text-white')
                                         }
                                       >
@@ -189,8 +189,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <li>
                       <NavLink
                         to={route}
-                        className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                          !!singleItemCondition && 'bg-graydark dark:bg-meta-4'
+                        className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-graydark/10 dark:text-bodydark1 dark:hover:bg-meta-4 ${
+                          !!singleItemCondition && 'bg-[#EFEFEF] dark:bg-meta-4'
                         }`}
                       >
                         {groupIcon}

@@ -4,13 +4,16 @@ import { Route, Routes } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import RegisterPage from '../pages/Authentication/RegisterPage';
 import SignIn from '../pages/Authentication/SignIn';
-import ECommerce from '../pages/Dashboard/ECommerce';
+import DashboardPage from '../pages/Dashboard/DashboardPage';
 import ProfilePage from '../pages/Dashboard/Profile/ProfilePage';
 import TransactionsPage from '../pages/Dashboard/TransactionsPage';
 import ErrorPage from '../pages/ErrorPage';
 import RequireAuth from './RequireAuth';
 import routes from './routes';
 import useEnhancedCustomRouterUtilities from './useEnhancedCustomRouterUtilities';
+import BuyAirtimePage from '../pages/Dashboard/BuyAirtimePage';
+import BuyDataPage from '../pages/Dashboard/BuyDataPage';
+import PayCablePage from '../pages/Dashboard/PayCablePage';
 // import RatesPage from '../pages/Dashboard/SystemConfig/RatesPage';
 
 const DefaultLayout = lazy(() => import('../layout/DefaultLayout'));
@@ -64,7 +67,7 @@ const AppRouter = (): JSX.Element => {
           element={
             <>
               <PageTitle title="Dashboard" />
-              <ECommerce />
+              <DashboardPage />
             </>
           }
         />
@@ -87,6 +90,35 @@ const AppRouter = (): JSX.Element => {
             <>
               <PageTitle title="Profile" />
               <ProfilePage />
+            </>
+          }
+        />
+        <Route
+          path={routes.BUY_AIRTIME_PAGE}
+          element={
+            <>
+              <PageTitle title="Buy Airtime" />
+              <BuyAirtimePage />
+            </>
+          }
+        />
+
+        <Route
+          path={routes.BUY_DATA_PAGE}
+          element={
+            <>
+              <PageTitle title="Buy Data" />
+              <BuyDataPage />
+            </>
+          }
+        />
+
+        <Route
+          path={routes.PAY_CABLE_TV_PAGE}
+          element={
+            <>
+              <PageTitle title="Pay cable tv" />
+              <PayCablePage />
             </>
           }
         />

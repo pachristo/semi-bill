@@ -22,7 +22,10 @@ export const sidebarLinks = (currentPathname: string): INavLink[] => {
       title: 'Dashboard',
       route: '',
       groupIcon: <DashboardIcon />,
-      singleItemCondition: currentPathname === routes.DASHBOARD_LAYOUT,
+      singleItemCondition:
+        currentPathname === routes.DASHBOARD_LAYOUT ||
+        currentPathname.includes(routes.BUY_AIRTIME_PAGE) ||
+        currentPathname.includes(routes.BUY_DATA_PAGE),
     },
 
     {

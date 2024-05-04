@@ -1,7 +1,7 @@
 const AppLogo = (): JSX.Element => {
   return (
     <>
-      <span className="">
+      <span className="hidden">
         <svg
           width="139"
           height="43"
@@ -60,7 +60,7 @@ const AppLogo = (): JSX.Element => {
         </svg>
       </span>
 
-      <span className="hidden">
+      <span className="">
         <svg
           width="139"
           height="43"

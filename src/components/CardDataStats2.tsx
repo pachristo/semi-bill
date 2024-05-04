@@ -15,9 +15,9 @@ const CardDataStats2: React.FC<CardDataStatsProps> = ({
   return (
     <Link
       to={link}
-      className=" transition-all duration-300 hover:brightness-150"
+      className=" rounded-lg bg-white transition-all  duration-300  hover:bg-primary/10 dark:bg-boxdark dark:hover:brightness-150"
     >
-      <div className="rounded-sm border border-stroke bg-white px-4 py-3 shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="rounded-lg border border-stroke px-4 py-3 shadow-default dark:border-strokedark">
         <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
           {children}
         </div>

@@ -1,11 +1,3 @@
-export const groupRoutes = {
-  CRYPTO: '/crypto/list',
-  CRYPTO_MANAGEMENT: '/crypto/asset',
-  GIFT_CARD_MANAGEMENT: '/gift-card',
-  GIFTCARDS: '/giftcards',
-  CONFIG: '/config',
-};
-
 const dashboard = '/dashboard';
 
 export default Object.freeze({
@@ -16,4 +8,7 @@ export default Object.freeze({
   DASHBOARD_LAYOUT: dashboard,
   TRANSACTIONS_PAGE: dashboard + '/transactions',
   PROFILE_PAGE: dashboard + '/profile',
+  BUY_AIRTIME_PAGE: dashboard + '/buy-airtime',
+  BUY_DATA_PAGE: dashboard + '/buy-data',
+  PAY_CABLE_TV_PAGE: dashboard + '/pay-cable-tv',
 });

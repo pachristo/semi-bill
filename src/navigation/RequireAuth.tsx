@@ -1,9 +1,8 @@
 import { PropsWithChildren, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useStore } from 'zustand';
 import { authStore } from '../stores/auth.store';
 import { useNavigationHistoryStore } from '../stores/navigationHistoryStore';
-import { appToast } from '../utils/appToast';
 import routes from './routes';
 
 interface Props extends PropsWithChildren {
@@ -11,9 +10,7 @@ interface Props extends PropsWithChildren {
 }
 const RequireAuth = ({ isSuperAdmin, children }: Props): JSX.Element => {
   const navigationStore = useNavigationHistoryStore();
-  const { loginResponse, checkIfSuperAdmin } = useStore(authStore);
-
-  const navigate = useNavigate();
+  const { loginResponse } = useStore(authStore);
 
   useEffect(() => {
     if (!loginResponse?.token) {
@@ -23,11 +20,6 @@ const RequireAuth = ({ isSuperAdmin, children }: Props): JSX.Element => {
   }, [loginResponse?.token]);
 
   if (isSuperAdmin === true) {
-    if (!checkIfSuperAdmin()) {
-      appToast.Error('You are not allowed to view this route');
-      navigate(-1);
-    }
-
     return <>{children}</>;
     // return !!checkIfSuperAdmin() ? (
     //   <>{children}</>

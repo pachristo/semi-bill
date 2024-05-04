@@ -2,22 +2,23 @@ import { BiMoneyWithdraw } from 'react-icons/bi';
 import CardDataStats2 from '../../components/CardDataStats2';
 import LeadsReport from '../../components/LeadsReport';
 import LineImage from '../../assets/line.svg';
+import routes from '../../navigation/routes';
 
 const data = [
   {
     title: 'Buy Airtime',
     icon: <BiMoneyWithdraw className=" text-xl sm:text-2xl" />,
-    link: '',
+    link: routes.BUY_AIRTIME_PAGE,
   },
   {
     title: 'Buy Data',
     icon: <BiMoneyWithdraw className=" text-xl sm:text-2xl" />,
-    link: '',
+    link: routes.BUY_DATA_PAGE,
   },
   {
     title: 'Pay Cable Tv',
     icon: <BiMoneyWithdraw className=" text-xl sm:text-2xl" />,
-    link: '',
+    link: routes.PAY_CABLE_TV_PAGE,
   },
   {
     title: 'Electricity',
@@ -46,7 +47,7 @@ const data = [
   },
 ];
 
-const ECommerce: React.FC = () => {
+const DashboardPage: React.FC = () => {
   return (
     <>
       <h1 className="my-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
@@ -77,9 +78,11 @@ const ECommerce: React.FC = () => {
         </div>
       </div>
 
-      <h2 className="my-5  font-medium">What will you like to do today?</h2>
+      <h2 className="mb-5 mt-20  font-medium">
+        What will you like to do today?
+      </h2>
 
-      <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
+      <div className="mb-10 grid grid-cols-1 gap-4  md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
         {data.map(({ icon, link, title }, key) => (
           <CardDataStats2 key={key} title={title} children={icon} link={link} />
         ))}
@@ -90,4 +93,4 @@ const ECommerce: React.FC = () => {
   );
 };
 
-export default ECommerce;
+export default DashboardPage;
