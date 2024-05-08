@@ -14,6 +14,7 @@ import useEnhancedCustomRouterUtilities from './useEnhancedCustomRouterUtilities
 import BuyAirtimePage from '../pages/Dashboard/BuyAirtimePage';
 import BuyDataPage from '../pages/Dashboard/BuyDataPage';
 import PayCablePage from '../pages/Dashboard/PayCablePage';
+import HomePage from '../pages/HomePage';
 // import RatesPage from '../pages/Dashboard/SystemConfig/RatesPage';
 
 const DefaultLayout = lazy(() => import('../layout/DefaultLayout'));
@@ -28,8 +29,8 @@ const AppRouter = (): JSX.Element => {
         index
         element={
           <>
-            <PageTitle title="Login" />
-            <SignIn />
+            <PageTitle title="Home" />
+            <HomePage />
           </>
         }
       />
