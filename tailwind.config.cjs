@@ -333,6 +333,7 @@ module.exports = {
       screens: {
         lgxl: '1120px',
       },
+      
       animation: {
         linspin: 'linspin 1568.2353ms linear infinite',
         easespin: 'easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both',
